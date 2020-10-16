@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  /* background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%); */
+  color: black;
+  font-family: "Poppins", sans-serif;
+  /* min-height: 100vh; */
+}
+.App {
+  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+.todo-main {
+  width: 65%;
+  position: relative;
+}
+
+.todo-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  text-align: center;
+  margin: 0.5em;
+}
+
+.todo-add {
+  /* display: flex; */
+  /* flex-direction: row; */
+  min-height: 5vh;
+  margin: 0.5em;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0.5em;
+}
+
+.todo-list {
+  min-width: 100%;
+  list-style: none;
+}
+
+.todo-task {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* justify-content: flex-start; */
+}
+.todo-item {
+  width: 100%;
+  background-color: white;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 1s ease;
+
+  border: 0.1px solid gray;
+  border-radius: 10px;
+
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+
+.todo-content {
+  margin: 0rem 0.5rem;
+  font-size: large;
+}
+
+.todo-due {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 32px;
+  margin-top: 0.25rem;
+}
+
+.left-side {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 70%;
+
+  margin: 0.5rem;
+}
+.right-side {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0.1rem;
+  width: 30%;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.25;
+}
+
+.btn-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0rem 0.5rem;
+}
+
+.react-icon {
+  margin-right: 0.25rem;
+}
