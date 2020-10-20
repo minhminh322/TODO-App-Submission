@@ -11,22 +11,6 @@ const Todo = (props) => {
   const [contentInput, setContentInput] = useState("");
   const [dueInput, setDueInput] = useState(new Date());
 
-  const addHandler = (event) => {
-    event.preventDefault(); // Prevent REFRESH
-
-    let newTodo = {
-      id: props.todo.id,
-      status: "normal",
-      isCompleted: false,
-      content: contentInput,
-      due: dueInput,
-    };
-    props.setTodos([...props.todos, newTodo]);
-
-    // setContentInput("");
-    // props.setDueInput("");
-  };
-
   const saveHandler = (event) => {
     event.preventDefault(); // Prevent REFRESH
 
@@ -135,21 +119,6 @@ const Todo = (props) => {
             ></input>
           </>
         );
-      case "new":
-        return (
-          <input
-            className="form-control"
-            type="text"
-            placeholder="Take note here"
-            value={contentInput}
-            onChange={(event) => setContentInput(event.target.value)}
-            onKeyDown={(event) => {
-              if (event.key === "Enter") {
-                addHandler(event);
-              }
-            }}
-          ></input>
-        );
       default:
         return null;
     }
@@ -180,15 +149,6 @@ const Todo = (props) => {
             <DateChooser dueInput={dueInput} setDueInput={setDueInput} />
             <div className="btn btn-primary btn-icon" role="button" onClick={saveHandler}>
               <span>Save</span>
-            </div>
-          </>
-        );
-      case "new":
-        return (
-          <>
-            <DateChooser dueInput={dueInput} setDueInput={setDueInput} />
-            <div className="btn btn-primary btn-icon" role="button" onClick={addHandler}>
-              <span>Add</span>
             </div>
           </>
         );

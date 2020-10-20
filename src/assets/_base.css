@@ -18,7 +18,7 @@ body {
   align-self: center;
 }
 .todo-main {
-  width: 65%;
+  width: 85%;
   position: relative;
 }
 
@@ -32,8 +32,6 @@ body {
 }
 
 .todo-add {
-  /* display: flex; */
-  /* flex-direction: row; */
   min-height: 5vh;
   margin: 0.5em;
 }
